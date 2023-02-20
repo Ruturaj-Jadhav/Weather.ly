@@ -9,26 +9,25 @@
    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <!-- Header for our app-->
     <header>
-      <h1>Weatherly</h1>
+      <h1>Weather.ly</h1>
     </header>
 
   <div class="card">
       <div class="card_header">
-        <h2>Toronto</h2>
+        <h2><%=City%></h2>
         </div>
       <div class="card_body">
-        <h3>10&deg;</h3>
-        <h3>Cloudy</h3>
+        <h3><%=Temp%></h3>
+        <h3><%=info%></h3>
         <img >
         </div>
     </div>
 
      <!-- Form to enter weather data -->
 
-     <form>
-    <input type="text" id="city" placeholder="Enter your city"><input type="submit" value="Submit">
+     <form action="/" method="post">
+    <input type="text" name="city" placeholder="Enter your city" autocomplete="off" ><input type="submit">
     </form>
 
 
