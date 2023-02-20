@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 1.7em;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
+}
+
+header {
+  color: #42d1f5;
+}
+
+.card {
+  background-color: #42d1f5;
+  display: inline-block;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: light-gray;
+  border: none;
+  color: gray;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+form {
+ margin: 50px;
+}
