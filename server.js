@@ -16,7 +16,7 @@ app.post("/", function (req, res) {
   const url1 =
     "https://api.openweathermap.org/geo/1.0/direct?q=" +
     name +
-    "&appid=1fe231302abc885776886d9f9d695588";
+    "&appid="+process.env.WEATHER_API_KEY;
   https.get(url1, function (response) {
     response.on("data", function (data) {
       const coordinatesData = JSON.parse(data);
@@ -31,7 +31,7 @@ app.post("/", function (req, res) {
         lat +
         "&lon=" +
         lon +
-        "&appid=1fe231302abc885776886d9f9d695588&units=metric";
+        "&appid="+process.env.WEATHER_API_KEY+"&units=metric";
       https.get(url, function (response1) {
         response1.on("data", function (data) {
           const weatherData = JSON.parse(data);
@@ -55,6 +55,10 @@ app.get("/", function (req, res) {
   res.render("index", { City: city, info: description, Temp: temp });
 });
 
-app.listen(3000, function () {
-  console.log("Server Started");
+
+const port = process.env.PORT || 8800;
+
+app.listen(port, function () {
+  console.log(`Server Started on port ${process.env.PORT}`);
+
 });
